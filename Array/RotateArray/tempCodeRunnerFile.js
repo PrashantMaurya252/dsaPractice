@@ -1,0 +1,1 @@
+reverseTheArray(arr,0,n)

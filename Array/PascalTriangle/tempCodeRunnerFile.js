@@ -1,0 +1,1 @@
+console.log(nCr(4,2))
