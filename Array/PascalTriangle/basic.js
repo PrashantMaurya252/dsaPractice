@@ -20,9 +20,9 @@ function printRow(n){
     let ans=1
     let ansRow=[1]
     console.log(ans)
-    for(let i=1;i<n;i++){
-        ans=ans*(n-i)
-        ans=ans/i
+    for(let i=1;i<=n;i++){
+        ans=ans*(n-i+1)/i
+        // ans=ans/i
         ansRow.push(ans)
         console.log(ans)
     }
@@ -30,7 +30,8 @@ function printRow(n){
     
 }
 
-// printRow(6)
+
+console.log(printRow(3),"row")
 
 // if you have to print entire pascal triangle
 
@@ -40,10 +41,13 @@ function printPascal(n){
         const temp=[]
         for(let j=1;j<=i;j++){
             temp.push(nCr(i-1,j-1))
+            console.log(nCr(i-1,j-1),'nCr')
         }
         ans.push(temp)
     }
+    console.log(ans,'ans')
     return ans
+    
 }
 
 const ans = printPascal(5);
@@ -59,6 +63,6 @@ function printPascal2(n){
     return ans
 }
 let ans2 = printPascal2(5);
-for (let i = 0; i < ans2.length; i++) {
-    console.log(ans2[i].join(" "));
-}
+// for (let i = 0; i < ans2.length; i++) {
+//     console.log(ans2[i].join(" "));
+// }

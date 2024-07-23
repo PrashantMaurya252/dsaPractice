@@ -1,1 +1,1 @@
-console.log(nCr(4,2))
+ans=ans/i
