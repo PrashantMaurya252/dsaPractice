@@ -13,6 +13,10 @@ function fourSum(nums1,target){
                 if(sum === target){
                     const temp = [ nums[i],nums[j],nums[k],nums[l]]
                     ans.push(temp)
+                    k++
+                    l--
+                    while(k<l && nums[k] == nums[k-1]) k++
+                    while(k<l && nums[l] == nums[l+1]) l--
                 }else if(sum < target) k++
                 else l--
             }
