@@ -147,6 +147,7 @@ dll.addFirst(7)
 dll.addLast(6)
 dll.removeFirst()
 dll.removeLast()
+dll.addAt(0,8)
 
 dll.print()
 console.log("size of doubly LinkedList :"+dll.size() )
