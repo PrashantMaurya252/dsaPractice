@@ -3,9 +3,12 @@ function isPalindrome(str){
         return true
     }
     if(str.charAt(0) == str.charAt(str.length -1 )){
+        console.log(str, "str")
+        console.log(str.substring(1,str.length-1),"str substring")
+        
         return isPalindrome(str.substring(1,str.length-1));
     }
     return false
 }
 
-console.log(isPalindrome("AAAA"))
+console.log(isPalindrome("ABCDDCBA"))
