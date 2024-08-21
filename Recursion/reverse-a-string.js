@@ -7,6 +7,5 @@ function reverseString(str){
     return reverseString(str.substring(1))+str.charAt(0)
 }
 
-// console.log(reverseString("hello"))
+console.log(reverseString("hello"))
 
-console.log("Hello".substring(1))
