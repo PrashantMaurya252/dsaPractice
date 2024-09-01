@@ -13,6 +13,10 @@ class Graph{
         this.AdjList.get(w).push(v)
     }
 
+    getAdjecentVertices(v){
+        return this.AdjList.get(v) || []
+    }
+
     printGraph(){
         const get_keys = this.AdjList.keys()
 
@@ -56,3 +60,5 @@ g.addEdge('C', 'F');
 // E -> A D F C
 // F -> E C
 g.printGraph();
+
+console.log(g.getAdjecentVertices('A'))
