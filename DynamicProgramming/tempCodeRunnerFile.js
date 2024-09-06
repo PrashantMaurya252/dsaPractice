@@ -1,0 +1,1 @@
+console.log(gridTraveler(18,18))
