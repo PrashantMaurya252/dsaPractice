@@ -2,6 +2,7 @@ var isAnagram = function(s, t) {
     if (s.length !== t.length) return false
 
     const count = {}
+    console.log(count)
 
     for(let char of s){
        count[char] = (count[char] || 0) + 1;
@@ -11,8 +12,9 @@ var isAnagram = function(s, t) {
         }
         count[char] -= 1;
     }
-
+    console.log(count)
     return true;
+    
 };
 
 console.log(isAnagram('aagay','gyaaa'))

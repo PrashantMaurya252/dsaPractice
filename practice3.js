@@ -1,17 +1,10 @@
-function invertTree(root) {
-    if (root === null) {
-      return null;
+function countCharacter(str){
+    const count = {}
+
+    for(let char of str){
+        count[char] = (count[char] || 0) + 1
     }
-  
-    // Swap the left and right children
-    const temp = root.left;
-    root.left = root.right;
-    root.right = temp;
-  
-    // Recursively invert the left and right subtrees
-    invertTree(root.left);
-    invertTree(root.right);
-  
-    return root;
-  }
-  console.log(invertTree([2,1,3]))
+    return count
+}
+
+console.log(countCharacter("Prashant"))
