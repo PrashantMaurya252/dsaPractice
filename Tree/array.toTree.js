@@ -73,7 +73,8 @@ function treeToArray(root){
     return result
 }
 
-const tree = arrayToTree([4,2,7,1,3,6,9])
-const inverseTree = invertTree(tree)
-console.log(treeToArray(inverseTree))
+const tree = arrayToTree([1,2,3,4,5,6,7])
+// const inverseTree = invertTree(tree)
+// console.log(treeToArray(inverseTree))
+console.log(tree)
 

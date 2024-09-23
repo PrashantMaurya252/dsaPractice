@@ -46,12 +46,103 @@ class LinkedList{
         this.length++
         
     }
+
+    Delete(value){
+        if(!this.head ){
+            return null
+        }
+        if(this.head.data === value){
+            this.head = this.head.next
+            return
+        }
+
+        let current = this.head
+        let previous = null
+        console.log(this.head,"Head")
+
+        while(current !== null && current.data !== value){
+            previous = current
+            current = current.next
+        }
+
+        if(current === null){
+            console.log(`value ${value} does not find in linkedlist`)
+            return
+        }
+        console.log(previous,"previous",current,"current")
+
+        previous.next = current.next
+    }
+
+    Find(value){
+        if(!this.head){
+            return null
+        }
+        let current = this.head
+
+        while(current !== null && current.data !== value){
+            current = current.next
+        }
+
+        if(current === null){
+            console.log(`value ${value} not found in linkedlist`)
+            return
+        }
+
+        console.log('value found')
+        return 
+    }
+
+    Reverse(){
+        console.log("reverse-----------------------------------")
+        let prev = null
+        let current = this.head
+        let next = null
+
+        while(current !== null){
+            console.log(next,"next",current.next)
+            next = current.next
+            console.log(current.next,"current.next",prev,"prev")
+            current.next = prev
+            console.log(prev,"prev",current,"current")
+            prev = current
+            console.log(current,"current",next,"next")
+            current = next
+
+
+        }
+        this.head = prev
+    }
+
+    middle(){
+
+        if(this.head === null) return null
+
+        let slow = this.head
+        let fast = this.head
+
+        let current = this.head
+        while(fast !== null && fast.next !== null){
+            slow = slow.next
+            fast = fast.next.next
+        }
+        console.log(slow.data ,"middle")
+        return slow.data
+    }
+
+    
 }
 
 const ll =new LinkedList()
 ll.AddFirst(100)
 ll.AddLast(200)
 ll.AddLast(300)
+ll.AddLast(400)
+ll.AddLast(500)
+ll.AddLast(600)
+ll.Find(100)
+ll.middle()
+// ll.Reverse()
 
 console.log(ll,"ll")
  
